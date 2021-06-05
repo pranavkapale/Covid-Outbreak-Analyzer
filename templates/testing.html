@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<div class="container">
+ 
+
+    {% for i in lis %}
+        {% for k,v in i.items() %}
+            <div class="card" style="width: 30rem;">
+                <ul class="list-group list-group-flush">
+                    <li style="font-size: 120%;" class="list-group-item">{{k}} : {{v}}</li>
+                </ul>
+            </div>        
+        {% endfor %}
+    <br>
+    {% endfor %}
+
+    
+
+</div>
+
+{% endblock content %}

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+ 
+<div class="container">
+
+    <div style="float:left;" class="fs-5">
+
+        <h1>STATEWISE DATA:</h1>
+        <div class="list-group" style="font-size: 120%; ">
+            {% for item in lis %}
+                <form action="{{url_for("somework")}}" method="post">
+                    <input style=" min-width: 2px;max-width: 2px;" class="hidekar" type="text" id={{item}} name="statename"
+                        value={{item}}>
+                
+                    <button class="list-group-item list-group-item-action" style=" min-width: 200px;
+                                                            max-width: 270px;" class="btn btn-dark" type="submit">{{item}}</button>
+                </form>
+            
+            
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+{% endblock content %}  
+  
+ 
